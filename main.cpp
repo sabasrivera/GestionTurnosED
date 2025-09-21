@@ -6,7 +6,7 @@ using namespace std;
 int main(){
 
     Banco banco;
-    banco.FuncionSalir();
+    ///banco.FuncionSalir();
     banco.OpsionesMenu();
     
 
