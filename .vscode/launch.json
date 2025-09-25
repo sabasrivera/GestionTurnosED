@@ -1,0 +1,31 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Ejecutar Proyecto (g++)",
+            "type": "cppdbg",
+            "request": "launch",
+            // Esta línea le dice a VS Code qué archivo .exe debe ejecutar.
+            "program": "${workspaceFolder}\\main.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            // Esta opción abre una nueva ventana de terminal para tu programa.
+            "externalConsole": true,
+            "MIMode": "gdb",
+            "miDebuggerPath": "C:\\msys64\\ucrt64\\bin\\gdb.exe", // Asegúrate que la ruta a gdb.exe sea correcta
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            // ¡Esta es la línea más importante!
+            // Le dice a VS Code que ejecute nuestra tarea de compilación ANTES de intentar ejecutar el programa.
+            "preLaunchTask": "Compilar todo el proyecto (g++)"
+        }
+    ]
+}
+
